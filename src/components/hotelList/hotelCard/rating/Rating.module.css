@@ -1,0 +1,10 @@
+.ratingWrapper {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start; /* Ensures stars align horizontally */
+  }
+
+  .flexRating {
+    display: flex !important;  /* Forces horizontal layout */
+  }

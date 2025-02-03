@@ -1,0 +1,117 @@
+.card {
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; 
+  gap: 16px; 
+  overflow: hidden;
+  height: 150px;
+  font-weight: normal;
+}
+
+.imageContainer {
+  position: relative;
+  padding: 4px;
+}
+
+.hotelImage {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.dealBadge {
+  position: absolute;
+  top: 12px;
+  background-color: white; 
+  color: #ff0000;
+  padding: 6px 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.content {
+  border-top: 1px solid #bcbcbc;
+  display: flex;
+  flex-direction: column;
+  gap: 4px; 
+  flex: 1;
+  height: calc(100% - 8px);
+}
+
+.title {
+  margin: 12px 0 0;
+  font-size: 1.4rem; 
+  color: #333;
+  font-weight: bold; 
+  width: 25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.offerContainer {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: flex-start;
+  flex: 1;
+}
+
+.offerName {
+  display: block;
+  margin: 12px 0 0 0;
+  font-size: 0.85rem; 
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+.address {
+  font-size: 0.8rem; 
+  color: #999;
+}
+
+.priceBlock {
+  display: flex;
+  flex-direction: column;  
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+  margin-top: 1rem; 
+}
+
+.nightDescription {
+  padding-bottom: 0.5rem;
+  font-size: 0.7rem; 
+  font-weight: normal;
+  color: #262626;
+}
+
+.price {
+  text-align: right;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.priceIcon {
+  line-height: 1.5rem;
+  padding-right: 4px;
+  vertical-align: top;
+  font-size: 1rem;
+}
+
+.savings {
+  color: #ff0000;
+  font-weight: normal;
+  font-size: 1rem; 
+  text-align: center;
+}
+
+.cancellation {
+  font-size: 0.8rem; 
+  color: #008000;
+  display:block;
+  margin-top: 2.4rem;
+}

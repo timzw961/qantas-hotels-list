@@ -1,0 +1,36 @@
+.container {
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#000000;
+}
+
+.label {
+  margin-right: 10px;
+}
+
+.select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  color:#000000;
+  border-radius: 5px;
+  background-color: white;
+  padding-right: 10px;
+}
+
+
+.select:hover {
+  border-color: #999;
+}
+
+.select:focus {
+  outline: none; 
+  border-color: #66b3ff; 
+  box-shadow: 0 0 5px rgba(102, 179, 255, 0.5); 
+}
+
+.hotelsIn {
+  color:#535353;
+  font-style: italic;
+}
