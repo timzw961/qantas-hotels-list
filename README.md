@@ -24,7 +24,7 @@ My choice of the Next.js App Router stems from its modern development experience
 
 Due to time constraints, certain aspects of the component's full functionality were simplified or omitted to focus on core requirements. These include:
 
-*   **Location Information:**  The component currently does not display location details.
+*   **Location Information:**  The component currently does not take in a location (Sydney is hardcoded).
 *   **Hotel Offerings Link:**  Links to specific hotel offers are not implemented.
 *   **Pagination:**  Pagination for a large list of hotels is not included.
 *   **Error Handling:**  An error page for scenarios with no data is not implemented.
