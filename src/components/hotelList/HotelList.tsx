@@ -1,21 +1,31 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { HotelInformation } from "@/types";
 import HotelCard from "./hotelCard/HotelCard";
 import styles from "./HotelList.module.css";
+import HotelHeader from "./hotelHeader/HotelHeader";
 
 interface HotelListProps {
-  hotels: HotelInformation[];
+  hotelsData: HotelInformation[];
 }
 
-const HotelList = ({ hotels }: HotelListProps) => {
+const HotelList = ({ hotelsData }: HotelListProps) => {
+  const [hotels, setHotels] = useState(hotelsData);
+
+  const handleSort = (sortedHotels: HotelInformation[]) => {
+    setHotels(sortedHotels);
+  };
+
   return (
-    <div className={styles.container}>
-      {hotels.map((hotel) => (
-        <HotelCard key={hotel.id} hotel={hotel} />
-      ))}
-    </div>
+    <>
+      <HotelHeader hotels={hotelsData} onSort={handleSort} />
+      <div className={styles.container}>
+        {hotels.map((hotels) => (
+          <HotelCard key={hotels.id} hotel={hotels} />
+        ))}
+      </div>
+    </>
   );
 };
 

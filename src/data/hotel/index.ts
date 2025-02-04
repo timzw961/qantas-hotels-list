@@ -7,7 +7,6 @@ export const getHotelData: () => Promise<HotelInformation[]> = async () => {
 
     return hotelData.results;
   } catch (error) {
-    console.error("Error reading or parsing data.json:", error);
     throw error;
   }
 };

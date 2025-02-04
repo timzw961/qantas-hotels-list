@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { getHotelData } from "@/data/hotel";
-import HotelPage from "../app/hotels/HotelsPage";
 import QantasLogo from "../../public/qantas-logo.png";
+import HotelList from "@/components/hotelList/HotelList";
 
 export const dynamic = "force-dynamic";
 
@@ -13,7 +13,7 @@ const Page = async () => {
     <div className={styles.page}>
       <Image src={QantasLogo} alt="Qantas Logo" />
 
-      <HotelPage hotelsData={hotelData} />
+      <HotelList hotelsData={hotelData} />
     </div>
   );
 };

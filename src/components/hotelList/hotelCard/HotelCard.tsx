@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { HotelInformation } from "@/types";
 import styles from "./HotelCard.module.css";
+import HotelPrice from "./price/HotelPrice";
+import Rating from "./rating/Rating";
 
 interface HotelCardProps {
   hotel: HotelInformation;
@@ -26,7 +28,13 @@ const HotelCard = ({ hotel }: HotelCardProps) => {
         )}
       </div>
       <div className={styles.content}>
-        <h3 className={styles.title}>{property.title}</h3>
+        <div className={styles.titleContainer}>
+          <span className={styles.title}>{property.title} </span>
+          <Rating
+            ratingValue={property.rating.ratingValue}
+            ratingType={property.rating.ratingType}
+          />
+        </div>
 
         <div className={styles.offerContainer}>
           <div>
@@ -42,18 +50,10 @@ const HotelCard = ({ hotel }: HotelCardProps) => {
               <p className={styles.cancellation}>Free cancellation</p>
             )}
           </div>
-          <div className={styles.priceBlock}>
-            <p className={styles.nightDescription}>
-              <b>1 </b>night total (AUD)
-            </p>
-            <p className={styles.price}>
-              <span className={styles.priceIcon}>$</span>
-              {offer.displayPrice.amount}
-            </p>
-            {offer.savings && (
-              <p className={styles.savings}>Save ${offer.savings.amount}~</p>
-            )}
-          </div>
+          <HotelPrice
+            offerPrice={offer.displayPrice.amount}
+            savings={offer.savings}
+          />
         </div>
       </div>
     </div>
